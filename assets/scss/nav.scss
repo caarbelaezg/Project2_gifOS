@@ -1,0 +1,44 @@
+.main-content {
+    padding: 2.1% 9.7% 2.1% 6.3%;
+}
+
+.nav .gif-opt {
+    display: flex;
+    justify-content: space-between;
+    & img {
+        height: 64px;
+        width: 102.6px;
+    }
+    .gif-opt-btn {
+        display: flex;
+        align-items: center;
+        & .btn {
+            width: 144px;
+            height: 36px;
+            background: #F7C9F3;
+            border: 1px solid #110038;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            font-family: 'Chakra Petch';
+            font-size: 16px;
+            color: #110038;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 18px;
+        }
+        & .btn-1 {
+            margin-right: 16px;
+        }
+        .my-gif {
+            font-family: 'Chakra Petch';
+            margin-left: 16px;
+            font-size: 16px;
+            color: #110038;
+            letter-spacing: 0;
+            line-height: 18px;
+            text-decoration: none;
+            & .my-gif-und {
+                text-decoration: underline;
+            }
+        }
+    }
+}

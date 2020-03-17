@@ -1,0 +1,19 @@
+.search-cont {
+    background-color: #E6E6E6 100%;
+    padding-top: 16px;
+    & form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & p {
+            padding-left: 0.4%;
+            height: 24px;
+            background: linear-gradient(90deg, rgba(65, 128, 246, 1) 0%, rgba(247, 201, 243, 1) 100%);
+            font-family: 'Chakra Petch';
+            font-weight: 600;
+            font-size: 14px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+        }
+    }
+}
