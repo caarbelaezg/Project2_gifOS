@@ -28,6 +28,16 @@
         & .btn-1 {
             margin-right: 16px;
         }
+        & .btn-dpm {
+            width: 36px;
+            height: 36px;
+            margin: auto;
+            border-left: 0px;
+            & img {
+                width: 10px;
+                height: 6px;
+            }
+        }
         .my-gif {
             font-family: 'Chakra Petch';
             margin-left: 16px;

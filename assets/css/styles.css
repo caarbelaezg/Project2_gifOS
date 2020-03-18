@@ -55,6 +55,18 @@ header p {
     margin-right: 16px;
 }
 
+.nav .gif-opt .gif-opt-btn .btn-dpm {
+    width: 36px;
+    height: 36px;
+    margin: auto;
+    border-left: 0px;
+}
+
+.nav .gif-opt .gif-opt-btn .btn-dpm img {
+    width: 10px;
+    height: 6px;
+}
+
 .nav .gif-opt .gif-opt-btn .my-gif {
     font-family: "Chakra Petch";
     margin-left: 16px;
