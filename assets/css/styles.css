@@ -16,7 +16,7 @@ header p {
 }
 
 
-/*---------------*/
+/*-------NAV--------*/
 
 .main-content {
     padding: 2.1% 9.7% 2.1% 6.3%;
@@ -38,17 +38,40 @@ header p {
 }
 
 .nav .gif-opt .gif-opt-btn .btn {
-    width: 144px;
+    width: 131px;
     height: 36px;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #F7C9F3;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.nav .gif-opt .gif-opt-btn .btn div {
+    width: 123px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #110038;
     font-family: "Chakra Petch";
     font-size: 16px;
-    color: #110038;
     letter-spacing: 0;
     text-align: center;
     line-height: 18px;
+}
+
+.nav .gif-opt .gif-opt-btn .btn div:hover {
+    border: 1px dotted #110038;
+}
+
+.nav .gif-opt .gif-opt-btn .btn:hover {
+    background: #E6BBE2;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
 .nav .gif-opt .gif-opt-btn .btn-1 {
