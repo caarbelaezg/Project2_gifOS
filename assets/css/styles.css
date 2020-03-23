@@ -27,7 +27,7 @@ header p {
     justify-content: space-between;
 }
 
-.nav .gif-opt img {
+.nav .gif-opt .gif-os {
     height: 64px;
     width: 102.6px;
 }
@@ -38,23 +38,12 @@ header p {
 }
 
 .nav .gif-opt .gif-opt-btn .btn {
-    width: 131px;
-    height: 36px;
-    padding: 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: #F7C9F3;
-    border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    padding: 0px;
 }
 
-.nav .gif-opt .gif-opt-btn .btn div {
-    width: 123px;
-    height: 26px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav .gif-opt .gif-opt-btn .btn .text-btn {
     text-decoration: none;
     color: #110038;
     font-family: "Chakra Petch";
@@ -64,28 +53,39 @@ header p {
     line-height: 18px;
 }
 
-.nav .gif-opt .gif-opt-btn .btn div:hover {
-    border: 1px dotted #110038;
-}
-
-.nav .gif-opt .gif-opt-btn .btn:hover {
-    background: #E6BBE2;
-    border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-}
-
 .nav .gif-opt .gif-opt-btn .btn-1 {
-    margin-right: 16px;
-}
-
-.nav .gif-opt .gif-opt-btn .btn-dpm {
-    width: 36px;
+    width: 144px;
     height: 36px;
-    margin: auto;
-    border-left: 0px;
+    margin-right: 16px;
+    border: 1px solid #110038;
 }
 
-.nav .gif-opt .gif-opt-btn .btn-dpm img {
+.nav .gif-opt .gif-opt-btn .btn-2 {
+    width: 168px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #110038;
+}
+
+.nav .gif-opt .gif-opt-btn .btn-2 .txt-2 {
+    display: flex;
+    justify-content: center;
+    text-justify: center;
+    width: 131px;
+}
+
+.nav .gif-opt .gif-opt-btn .btn-2 .img-cont {
+    height: 35px;
+    width: 35px;
+    border-left: 1px solid #110038;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .gif-opt .gif-opt-btn .btn-2 .img-cont img {
     width: 10px;
     height: 6px;
 }
