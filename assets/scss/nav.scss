@@ -17,6 +17,11 @@
             box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
             padding: 0px;
             & .text-btn {
+                margin: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 28px;
                 text-decoration: none;
                 color: #110038;
                 font-family: 'Chakra Petch';
@@ -26,6 +31,9 @@
                 line-height: 18px;
             }
         }
+        & .btn:hover .text-btn {
+            border: 1px dotted #110038;
+        }
         & .btn-1 {
             width: 144px;
             height: 36px;
@@ -33,7 +41,7 @@
             border: 1px solid #110038;
         }
         & .btn-2 {
-            width: 168px;
+            width: 169px;
             display: flex;
             height: 36px;
             justify-content: space-between;
@@ -43,12 +51,12 @@
                 display: flex;
                 justify-content: center;
                 text-justify: center;
-                width: 131px;
+                width: 138px;
             }
             & .img-cont {
-                height: 35px;
-                width: 35px;
-                border-left: 1px solid #110038;
+                margin: 2px;
+                height: 27px;
+                width: 27px;
                 display: flex;
                 align-items: center;
                 justify-content: center;

@@ -44,6 +44,11 @@ header p {
 }
 
 .nav .gif-opt .gif-opt-btn .btn .text-btn {
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
     text-decoration: none;
     color: #110038;
     font-family: "Chakra Petch";
@@ -51,6 +56,11 @@ header p {
     letter-spacing: 0;
     text-align: center;
     line-height: 18px;
+}
+
+.nav .gif-opt .gif-opt-btn .btn:hover .text-btn {
+    border: 1px dotted #110038;
+    background: #E6BBE2;
 }
 
 .nav .gif-opt .gif-opt-btn .btn-1 {
@@ -61,9 +71,9 @@ header p {
 }
 
 .nav .gif-opt .gif-opt-btn .btn-2 {
-    width: 168px;
-    height: 36px;
+    width: 169px;
     display: flex;
+    height: 36px;
     justify-content: space-between;
     align-items: center;
     border: 1px solid #110038;
@@ -73,13 +83,13 @@ header p {
     display: flex;
     justify-content: center;
     text-justify: center;
-    width: 131px;
+    width: 138px;
 }
 
 .nav .gif-opt .gif-opt-btn .btn-2 .img-cont {
-    height: 35px;
-    width: 35px;
-    border-left: 1px solid #110038;
+    margin: 2px;
+    height: 27px;
+    width: 27px;
     display: flex;
     align-items: center;
     justify-content: center;
