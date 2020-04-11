@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <header>
         <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
     </header>
@@ -45,46 +44,25 @@
         <article class="sugg-head">
             <p>Hoy te sugerimos</p>
         </article>
-        <article class="sugg-cont">
-            <div class="sugg-item">
-                <div class="sugg-item-head">
-                    <p class="sugg-text">#Gif 1</p>
-                    <img src="assets/images/button3.svg" alt="">
-                </div>
-                <img id="prueba" class="sugg-img" src="" alt="">
-                <button class="sugg-btn">Ver más...</button>
-            </div>
-            <div class="sugg-item">
-                <div class="sugg-item-head">
-                    <p class="sugg-text">#Gif 2</p>
-                    <img src="assets/images/button3.svg" alt="">
-                </div>
-                <img src="" alt="">
-                <button class="sugg-btn">Ver más...</button>
-            </div>
-            <div class="sugg-item">
-                <div class="sugg-item-head">
-                    <p class="sugg-text">#Gif 3</p>
-                    <img src="assets/images/button3.svg" alt="">
-                </div>
-                <img src="" alt="">
-                <button class="sugg-btn">Ver más...</button>
-            </div>
-            <div class="sugg-item">
-                <div class="sugg-item-head">
-                    <p class="sugg-text">#Gif 4</p>
-                    <img class="btn-x" src="assets/images/button3.svg" alt="">
-                </div>
-                <img class="sugg-gifo" src="" alt="">
-                <button class="sugg-btn">Ver más...</button>
-            </div>
+        <article id="suggParent" class="sugg-cont">
+            <!--This section is filled with Javascript-->
         </article>
     </section>
 
     <section class="main-content sugg">
-        <!--Aplican ciertos estilos que son los mismos-->
+        <!--Some styles are the same-->
         <article class="sugg-head">
             <p>Tendencias</p>
+        </article>
+        <article id="tendParent" class="sugg-cont">
+            <div class="sugg-item tend-marg">
+                <div class="sugg-img-cont">
+                    <img class="sugg-img" src="" alt="">
+                </div>
+                <div class="tend-item-head">
+                    <p class="tend-text">#${tags[0]} #${tags[1]}</p>
+                </div>
+            </div>
         </article>
 
     </section>

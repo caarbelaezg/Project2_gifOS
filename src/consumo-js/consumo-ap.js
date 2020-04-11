@@ -1,10 +1,9 @@
-async function getGuiphos(url) {
+async function apiConsumption(url) {
     try {
         const response = await fetch(url);
         const jsonResponse = await response.json();
-        console.log(jsonResponse)
         return jsonResponse;
     } catch (error) {
-        console.log(error)
+        console.log('Se presentó un error en el consumo del API' + error)
     }
 }
