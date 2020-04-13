@@ -33,14 +33,25 @@
                 <form>
                     <p>Buscar</p>
                     <div class="search-bar-container">
-                        <input class="search-bar" type="text" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-                        <button type="submit" class="search-btn"><img src="assets/images/lupa.svg" alt="" srcset=""> Buscar</button>
+                        <input id="search" class="search-bar" type="text" autocomplete="off" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                        <button id="search-btn" onclick="searchGifs()" type="submit" class="search-btn"><img id="lupa" src="assets/images/lupa_inactive.svg" alt="" srcset=""> Buscar</button>
                     </div>
                 </form>
+                <div id="search-sugg-cont" class="search-sugg-cont">
+                    <button class="search-sugg-item">
+                        <p>Golden Retriever</p>
+                    </button>
+                    <button class="search-sugg-item">
+                        <p>Kitten</p>
+                    </button>
+                    <button class="search-sugg-item">
+                        <p>Unicorn</p>
+                    </button>
+                </div>
             </div>
         </article>
     </section>
-    <section class="main-content sugg">
+    <section id="suggestion" class="main-content sugg">
         <article class="sugg-head">
             <p>Hoy te sugerimos</p>
         </article>
@@ -55,14 +66,7 @@
             <p>Tendencias</p>
         </article>
         <article id="tendParent" class="sugg-cont">
-            <div class="sugg-item tend-marg">
-                <div class="sugg-img-cont">
-                    <img class="sugg-img" src="" alt="">
-                </div>
-                <div class="tend-item-head">
-                    <p class="tend-text">#${tags[0]} #${tags[1]}</p>
-                </div>
-            </div>
+            <!--This section is filled with Javascript-->
         </article>
 
     </section>

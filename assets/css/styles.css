@@ -140,6 +140,7 @@ header p {
     margin-top: 16px;
     background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    position: relative;
 }
 
 .search-cont form {
@@ -196,6 +197,37 @@ header p {
     background: #E6E6E6;
     border: 1px solid #808080;
     box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.search-cont .search-sugg-cont {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 0.938em;
+    position: absolute;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    height: 10.000em;
+    width: 69.9em;
+    z-index: 1;
+}
+
+.search-cont .search-sugg-item {
+    height: 36px;
+    width: 75em;
+    background: #F0F0F0;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    padding: 0px;
+}
+
+.search-cont .search-sugg-item p {
+    display: flex;
+    height: 28px;
+    margin: 2px;
+    padding-left: 1em;
+    align-items: center;
+    font-family: "Chakra Petch";
 }
 
 

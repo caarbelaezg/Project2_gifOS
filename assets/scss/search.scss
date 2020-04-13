@@ -2,6 +2,7 @@
     margin-top: 16px;
     background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    position: relative;
     & form {
         display: flex;
         flex-direction: column;
@@ -31,6 +32,12 @@
             background: #FFFFFF;
             border: 1px solid #979797;
             box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+            font-family: "Chakra Petch";
+            font-size: 16px;
+            color: #B4B4B4;
+            letter-spacing: 0;
+            line-height: 22px;
+            padding-left: 1.1%;
         }
         & .search-btn {
             width: 102px;
@@ -46,13 +53,19 @@
             border: 1px solid #808080;
             box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
         }
-        & .search-btn::placeholder {
-            font-family: 'Chakra Petch';
-            padding: 0.8% 0% 0.8% 1.1%;
-            font-size: 16px;
-            color: #B4B4B4;
-            letter-spacing: 0;
-            line-height: 22px;
-        }
+    }
+    & .search-sugg-cont {
+        position: absolute;
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        height: 10.000em;
+        width: 100%;
+    }
+    & .search-sugg-item {
+        height: 2em;
+        width: 62.163em;
+        background: #F0F0F0;
+        border: 1px solid #808080;
+        box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
     }
 }

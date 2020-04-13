@@ -2,7 +2,7 @@ window.onload = () => {
 
     //Load suggestion section
 
-    let arrayQuerys = ['jvn', 'golden retriever', 'unicorn', 'cat']
+    let arrayQuerys = ['Jonathanvanness', 'golden retriever', 'unicorn', 'cat']
     let suggParent = document.getElementById("suggParent")
     let suggChild = ''
 
@@ -52,18 +52,50 @@ window.onload = () => {
             tendParent.innerHTML = tendChild
         })
     })
+}
+
+/*-----------Autocomplete search suggestions-------------*/
+let search = document.getElementById("search")
+let query = ''
+let sugerencia = document.getElementById("search-sugg-cont")
+let lupa = document.getElementById("lupa")
+let btn = document.getElementById("search-btn")
+
+//Identificar el error que se está genernado al consumir el servicio
+search.oninput = (event) => {
+    query = event.srcElement.value
+    if (query != '') {
+        // change atributes
+        sugerencia.setAttribute('style', 'display:flex')
+        search.setAttribute("style", "color:black")
+        lupa.setAttribute('src', 'assets/images/lupa.svg')
+        btn.setAttribute('style', 'background-color:#F7C9F3')
+
+        //API consumption
+        let itemsToFill = document.querySelectorAll('button.search-sugg-item > p')
+        apiConsumption(`http://api.giphy.com/v1/gifs/search/tags?api_key=FeH8s28nS47gsfXjis23Brzi6lcQfXOJ&q=${query}`).then(answer => {
+            for (let i = 0; i <= 2; i++) {
+                try {
+                    itemsToFill[i].innerHTML = answer.data[i].name
+                } catch {
+                    console.log('Imposible extraer datos de la respuesta' + answer.data[i].name)
+                }
+            }
+        }).catch(
+            console.log('imposible consumir servicio con el query: ' + query)
+        )
+    } else {
+        sugerencia.setAttribute('style', 'display:none')
+        lupa.setAttribute('src', 'assets/images/lupa_inactive.svg')
+        btn.setAttribute('style', 'background-color:#E6E6E6')
+    }
+}
+
+let searchGifs = () => {
+    let query = document.getElementById('search').innerHTML
+    apiConsumption(`http://api.giphy.com/v1/gifs/search?api_key=FeH8s28nS47gsfXjis23Brzi6lcQfXOJ&limit=1&q=${query}&rating=g`).then(response => {
+
+    })
 
 
 }
-
-
-/*const objeto = document.getElementById('main-img')
-        const descripcion = document.getElementById('desc-new');
-        const parrafo = document.createElement("p");
-        const titulo = document.getElementById("title");
-        const nombrePersonaje = document.createElement('h1');
-        objeto.setAttribute('src', response[0].image)
-        parrafo.innerHTML = response[0].quote;
-        nombrePersonaje.innerHTML = response[0].character;
-        descripcion.appendChild(parrafo);
-        titulo.appendChild(nombrePersonaje);*/
