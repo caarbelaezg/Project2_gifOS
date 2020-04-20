@@ -49,30 +49,46 @@
                 border: 1px solid #110038;
             }
             & .img-cont {
-                width: 34px;
-                height: 34px;
+                width: 36px;
+                height: 36px;
                 border: 1px solid #110038;
                 border-left: 0px;
                 & .img-cont-dot {
                     margin: 2px;
-                    height: 32px;
+                    height: 28px;
                     position: relative;
-                    & img {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 10px;
-                        height: 6px;
-                    }
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
+            }
+            & .themes {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                top: 36px;
+                width: 167px;
+                height: 102px;
+                background: #E6E6E6;
+                box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                z-index: 2;
             }
         }
         & .btn-theme-cont:hover .btn .text-btn {
             border: 1px dotted #110038;
+            background: #E6BBE2;
         }
         & .btn-theme-cont:hover .img-cont .img-cont-dot {
             border: 1px dotted #110038;
+            background: #E6BBE2;
+        }
+        & .btn-theme-cont:active .btn .text-btn {
+            border: 1px dotted #110038;
+            background: #E6BBE2;
+        }
+        & .btn-theme-cont:active .img-cont .img-cont-dot {
+            border: 1px dotted #110038;
+            background: #E6BBE2;
         }
         .my-gif {
             font-family: 'Chakra Petch';

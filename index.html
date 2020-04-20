@@ -20,10 +20,14 @@
                 <img class="gif-os" src="assets/images/gifOF_logo.png" alt="">
                 <div class="gif-opt-btn">
                     <button class="btn btn-1"><p class="text-btn" href="">Crear Guifos</p></button>
-                    <div class="btn-theme-cont">
-                        <button class="btn btn-2"><p class="text-btn">Elegir tema</p></button>
-                        <div class="btn img-cont">
+                    <div id="themes-cont" class="btn-theme-cont">
+                        <button onclick="changeThemes()" class="btn btn-2"><p class="text-btn">Elegir tema</p></button>
+                        <button onclick="changeThemes()" class="btn img-cont">
                             <div class="img-cont-dot"><img src="assets/images/dropdown.svg" alt="" srcset=""></div>
+                        </button>
+                        <div id="themes" class="themes">
+                            <button id="day" class="sailorday"><span class="my-gif-und">S</span>ailor Day</button>
+                            <button id="night" class="sailornight"><span class="my-gif-und">S</span>ailor Night</button>
                         </div>
                     </div>
                     <a class="my-gif" href="#"><span class="my-gif-und">M</span>is Guifos</a>
@@ -34,23 +38,25 @@
                     <p>Buscar</p>
                     <div class="search-bar-container">
                         <input id="search" class="search-bar" type="text" autocomplete="off" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-                        <button id="search-btn" onclick="searchGifs()" type="submit" class="search-btn"><img id="lupa" src="assets/images/lupa_inactive.svg" alt="" srcset=""> Buscar</button>
+                        <button disabled type='button' onclick="searchGifs()" id="search-btn" class="search-btn"><img id="lupa" src="assets/images/lupa_inactive.svg" alt=""> Buscar</button>
                     </div>
                 </form>
                 <div id="search-sugg-cont" class="search-sugg-cont">
                     <button class="search-sugg-item">
-                        <p>Golden Retriever</p>
+                        <p></p>
                     </button>
                     <button class="search-sugg-item">
-                        <p>Kitten</p>
+                        <p></p>
                     </button>
                     <button class="search-sugg-item">
-                        <p>Unicorn</p>
+                        <p></p>
                     </button>
                 </div>
             </div>
         </article>
     </section>
+
+    <!--Suggestion section-->
     <section id="suggestion" class="main-content sugg">
         <article class="sugg-head">
             <p>Hoy te sugerimos</p>
@@ -60,18 +66,22 @@
         </article>
     </section>
 
+    <!--Tend section-->
     <section class="main-content sugg">
         <!--Some styles are the same-->
         <article class="sugg-head">
-            <p>Tendencias</p>
+            <p id="tend-text">Tendencias</p>
         </article>
         <article id="tendParent" class="sugg-cont">
             <!--This section is filled with Javascript-->
         </article>
 
     </section>
-    <script src="src/consumo-js/consumo-ap.js"></script>
-    <script src="src/operaciones-js/index.js"></script>
+
+    <script src="src/js/parameters.js"></script>
+    <script src="src/js/changeStyles.js"></script>
+    <script src="src/js/consumo-api.js"></script>
+    <script src="src/js/index.js"></script>
 </body>
 
 </html>

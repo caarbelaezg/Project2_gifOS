@@ -68,6 +68,7 @@ header p {
 
 .nav .gif-opt .gif-opt-btn .btn:hover .text-btn {
     border: 1px dotted #110038;
+    background: #E6BBE2;
 }
 
 .nav .gif-opt .gif-opt-btn .btn-1 {
@@ -78,6 +79,7 @@ header p {
 }
 
 .nav .gif-opt .gif-opt-btn .btn-theme-cont {
+    position: relative;
     width: 168px;
     display: flex;
     height: 36px;
@@ -89,34 +91,75 @@ header p {
 }
 
 .nav .gif-opt .gif-opt-btn .btn-theme-cont .img-cont {
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     border: 1px solid #110038;
     border-left: 0px;
 }
 
-.nav .gif-opt .gif-opt-btn .btn-theme-cont .img-cont .img-cont-dot {
-    margin: 2px;
-    width: 28px;
-    height: 28px;
-    position: relative;
+.nav .gif-opt .gif-opt-btn .btn-theme-cont .themes {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    top: 36px;
+    width: 148px;
+    height: 102px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    z-index: 2;
 }
 
-.nav .gif-opt .gif-opt-btn .btn-theme-cont .img-cont .img-cont-dot img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 6px;
+.nav .gif-opt .gif-opt-btn .btn-theme-cont .open {
+    display: flex;
+}
+
+.nav .gif-opt .gif-opt-btn .btn-theme-cont .themes .sailorday {
+    height: 36px;
+    font-family: "Chakra Petch";
+    font-size: 16px;
+    background: #FFF4FD;
+    border: 1px solid #CCA6C9;
+    box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.nav .gif-opt .gif-opt-btn .btn-theme-cont .themes .sailornight {
+    height: 36px;
+    font-family: "Chakra Petch";
+    font-size: 16px;
+    background: #F0F0F0;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.nav .gif-opt .gif-opt-btn .btn-theme-cont .img-cont .img-cont-dot {
+    margin: 2px;
+    height: 28px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav .gif-opt .gif-opt-btn .btn-theme-cont:hover .btn .text-btn {
     border: 1px dotted #110038;
+    background: #E6BBE2;
 }
 
 .nav .gif-opt .gif-opt-btn .btn-theme-cont:hover .img-cont .img-cont-dot {
     border: 1px dotted #110038;
+    background: #E6BBE2;
+}
+
+.nav .gif-opt .gif-opt-btn .btn-theme-cont:active .btn .text-btn {
+    border: 1px dotted #110038;
+    background: #E6BBE2;
+}
+
+.nav .gif-opt .gif-opt-btn .btn-theme-cont:active .img-cont .img-cont-dot {
+    border: 1px dotted #110038;
+    background: #E6BBE2;
 }
 
 .nav .gif-opt .gif-opt-btn .my-gif {
