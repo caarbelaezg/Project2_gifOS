@@ -79,12 +79,10 @@ search.oninput = (event) => {
 /*-----------Search gifs-------------*/
 
 let searchGifs = () => {
-
     hideSuggOnSearch()
     styleSearchBar(0)
 
     let query = document.getElementById('search').value
-
 
     //Cliean current tend section
     let tendParent = document.getElementById("tendParent")
@@ -112,27 +110,30 @@ let searchGifs = () => {
             `
             tendParent.innerHTML = tendChild
         })
-
     })
-
-
 }
 
 
 
+let dispChangeThemes = () => {
+    let them = document.getElementById('themes')
+    if (!them.classList.contains('open')) {
+        them.classList.add('open')
+    } else {
+        them.classList.remove('open')
+    }
+}
 
+let changeThemeNight = () => {
+    let cssLink = document.getElementById('cssTheme')
+    cssLink.setAttribute('href', 'assets/css/stylesNight.css')
+    hideChangeTheme()
+    changeImagesThemes()
+}
 
-
-
-
-/*let changeThemes = () => {
-    let cont = document.getElementById('themes')
-    cont.addEventListener('click', () => {
-        if (!cont.classList.contains('open')) {
-            cont.classList.add('open')
-        } else {
-            cont.classList.remove('open')
-        }
-    })
-
-*/
+let changeThemeDay = () => {
+    let cssLink = document.getElementById('cssTheme')
+    cssLink.setAttribute('href', 'assets/css/styles.css')
+    hideChangeTheme()
+    changeImagesThemes()
+}

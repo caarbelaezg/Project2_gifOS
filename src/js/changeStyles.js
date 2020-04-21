@@ -25,3 +25,24 @@ let hideSuggOnSearch = () => {
     suggCont.setAttribute('style', 'display:none')
 
 }
+
+let hideChangeTheme = () => {
+    let them = document.getElementById('themes')
+    them.classList.remove('open')
+}
+
+let changeImagesThemes = () => {
+    let cssLink = document.getElementById('cssTheme')
+    let theme = cssLink.getAttribute('href')
+    const logo = document.getElementById('logo')
+    const drop = document.getElementById('dropdown')
+    const lupa = document.getElementById('lupa')
+
+    if (theme === 'assets/css/stylesNight.css') {
+        logo.setAttribute('src', 'assets/images/gifOF_logo_dark.png')
+        lupa.setAttribute('src', 'assets/images/lupa_light.svg')
+    } else {
+        logo.setAttribute('src', 'assets/images/gifOF_logo.png')
+        lupa.setAttribute('src', 'assets/images/lupa_inactive.svg')
+    }
+}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link id="cssTheme" rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <title>gifOS project</title>
 </head>
 
@@ -17,17 +17,17 @@
     <section class="main-content">
         <article class="nav">
             <div class="gif-opt">
-                <img class="gif-os" src="assets/images/gifOF_logo.png" alt="">
+                <img id="logo" class="gif-os" src="assets/images/gifOF_logo.png" alt="">
                 <div class="gif-opt-btn">
                     <button class="btn btn-1"><p class="text-btn" href="">Crear Guifos</p></button>
                     <div id="themes-cont" class="btn-theme-cont">
-                        <button onclick="changeThemes()" class="btn btn-2"><p class="text-btn">Elegir tema</p></button>
-                        <button onclick="changeThemes()" class="btn img-cont">
-                            <div class="img-cont-dot"><img src="assets/images/dropdown.svg" alt="" srcset=""></div>
+                        <button onclick="dispChangeThemes()" class="btn btn-2"><p class="text-btn">Elegir tema</p></button>
+                        <button onclick="dispChangeThemes()" class="btn img-cont">
+                            <div class="img-cont-dot"><img id="dropdown" src="assets/images/dropdown.svg" alt="" srcset=""></div>
                         </button>
                         <div id="themes" class="themes">
-                            <button id="day" class="sailorday"><span class="my-gif-und">S</span>ailor Day</button>
-                            <button id="night" class="sailornight"><span class="my-gif-und">S</span>ailor Night</button>
+                            <button onclick="changeThemeDay()" class="sailorday"><span class="my-gif-und">S</span>ailor Day</button>
+                            <button onclick="changeThemeNight()" class="sailornight"><span class="my-gif-und">S</span>ailor Night</button>
                         </div>
                     </div>
                     <a class="my-gif" href="#"><span class="my-gif-und">M</span>is Guifos</a>
