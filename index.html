@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,53 +10,48 @@
 </head>
 
 <body>
-    <header>
-        <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+    <header class="header">
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
     </header>
-    <section class="main-content">
-        <article class="nav">
-            <div class="gif-opt">
-                <img id="logo" class="gif-os" src="public/assets/images/gifOF_logo.png" alt="">
-                <div class="gif-opt-btn">
-                    <button id="create-gifs" class="btn btn-1"><p class="text-btn">Crear Guifos</p></button>
-                    <div id="themes-cont" class="btn-theme-cont">
-                        <button onclick="dispChangeThemes()" class="btn btn-2"><p class="text-btn">Elegir tema</p></button>
-                        <button onclick="dispChangeThemes()" class="btn img-cont">
-                            <div class="img-cont-dot"><img id="dropdown" src="public/assets/images/dropdown.svg" alt="" srcset=""></div>
-                        </button>
-                        <div id="themes" class="themes">
-                            <button onclick="changeThemeDay()" class="sailorday"><span class="my-gif-und">S</span>ailor Day</button>
-                            <button onclick="changeThemeNight()" class="sailornight"><span class="my-gif-und">S</span>ailor Night</button>
-                        </div>
-                    </div>
-                    <a class="my-gif" href="public/app/html/myGifs.html"><span class="my-gif-und">M</span>is Guifos</a>
+
+    <section class="navigation body-margin">
+        <img id="logo" class="gif-os" src="public/assets/images/gifOF_logo.png" alt="guifo logo">
+        <div class="opt-container">
+            <a class="btn" href="public/app/html/create.html"><p>Crear Guifos</p></a>
+            <div id="themes-container" class="themes-container">
+                <a class="btn btn-drop" href=""><p>Elegir tema</p></a>
+                <a class="btn btn-arrow" href=""><p><img src="public/assets/images/dropdown.svg" alt="drop down arrow"></p></a>
+                <!-- Hidden section to display on click of themes-container id -->
+                <div id="themes" class="themes">
+                    <button onclick="changeThemeDay()" class="sailorday"><span class="my-gif-und">S</span>ailor Day</button>
+                    <button onclick="changeThemeNight()" class="sailornight"><span class="my-gif-und">S</span>ailor Night</button>
                 </div>
-            </div>
-            <div class="search-cont">
-                <form>
-                    <p>Buscar</p>
-                    <div class="search-bar-container">
-                        <input id="search" class="search-bar" type="text" autocomplete="off" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-                        <button disabled type='button' onclick="searchGifs()" id="search-btn" class="search-btn"><img id="lupa" src="public/assets/images/lupa_inactive.svg" alt=""> Buscar</button>
-                    </div>
-                </form>
-                <div id="search-sugg-cont" class="search-sugg-cont">
-                    <button class="search-sugg-item">
-                        <p></p>
-                    </button>
-                    <button class="search-sugg-item">
-                        <p></p>
-                    </button>
-                    <button class="search-sugg-item">
-                        <p></p>
-                    </button>
-                </div>
-            </div>
-        </article>
+            </div>            
+            <a class="myguifos" href=""><p><span style="text-decoration: underline;">M</span>is Guifos</p></a>
+        </div>
     </section>
 
+    <section class="body-margin search-cont">
+        <p class="title">Buscar</p>
+        <div class="search-bar-container">
+            <input id="search" class="search-bar" type="text" autocomplete="off" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+            <button disabled type='button' onclick="searchGifs(0)" id="search-btn" class="search-btn"><img id="lupa" src="public/assets/images/lupa_inactive.svg" alt=""> Buscar</button>
+        </div>
+        <div id="search-sugg-cont" class="search-sugg-cont">
+            <a class="search-sugg-item" onclick="searchGifs('search1')">
+                <p></p>
+            </a>
+            <a class="search-sugg-item" onclick="searchGifs('search2')">
+                <p></p>
+            </a>
+            <a class="search-sugg-item" onclick="searchGifs('search3')">
+                <p></p>
+            </a>
+        </div>
+    </section>  
+
     <!--Suggestion section-->
-    <section id="suggestion" class="main-content sugg">
+    <section id="suggestion" class="body-margin main-content sugg">
         <article class="sugg-head">
             <p>Hoy te sugerimos</p>
         </article>
@@ -67,7 +61,7 @@
     </section>
 
     <!--Tend section-->
-    <section class="main-content sugg">
+    <section class="body-margin main-content sugg">
         <!--Some styles are the same-->
         <article class="sugg-head">
             <p id="tend-text">Tendencias</p>
@@ -76,6 +70,7 @@
             <!--This section is filled with Javascript-->
         </article>
     </section>
+
     <script src="public/app/js/parameters.js"></script>
     <script src="public/app/js/changeStyles.js"></script>
     <script src="public/app/js/consumo-api.js"></script>

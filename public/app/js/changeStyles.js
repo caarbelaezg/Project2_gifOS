@@ -1,4 +1,4 @@
-let styleSearchBar = (param) => {
+const styleSearchBar = (param) => {
 
     const sugerencia = document.getElementById("search-sugg-cont")
     const lupa = document.getElementById("lupa")
