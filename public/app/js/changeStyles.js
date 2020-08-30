@@ -8,13 +8,13 @@ let styleSearchBar = (param) => {
         // change atributes on input change
         sugerencia.setAttribute('style', 'display:flex')
         search.setAttribute("style", "color:black")
-        lupa.setAttribute('src', 'assets/images/lupa.svg')
+        lupa.setAttribute('src', 'public/assets/images/lupa.svg')
         btn.setAttribute('style', 'background-color:#F7C9F3')
         btn.disabled = false
     } else {
         //Restores the default styles when input bar is empty
         sugerencia.setAttribute('style', 'display:none')
-        lupa.setAttribute('src', 'assets/images/lupa_inactive.svg')
+        lupa.setAttribute('src', 'public/assets/images/lupa_inactive.svg')
         btn.setAttribute('style', 'background-color:#E6E6E6')
         btn.disabled = true
     }
@@ -39,10 +39,17 @@ let changeImagesThemes = () => {
     const lupa = document.getElementById('lupa')
 
     if (theme === 'assets/css/stylesNight.css') {
-        logo.setAttribute('src', 'assets/images/gifOF_logo_dark.png')
-        lupa.setAttribute('src', 'assets/images/lupa_light.svg')
+        logo.setAttribute('src', 'public/assets/images/gifOF_logo_dark.png')
+        lupa.setAttribute('src', 'public/assets/images/lupa_light.svg')
     } else {
-        logo.setAttribute('src', 'assets/images/gifOF_logo.png')
-        lupa.setAttribute('src', 'assets/images/lupa_inactive.svg')
+        logo.setAttribute('src', 'public/assets/images/gifOF_logo.png')
+        lupa.setAttribute('src', 'public/assets/images/lupa_inactive.svg')
     }
+}
+
+let hideInstructions = () => {
+    const startButton = document.getElementById('instructions')
+    const captureCont = document.getElementById('capture')
+    startButton.setAttribute('style', 'display:none')
+    captureCont.setAttribute('style', 'display:flex')
 }

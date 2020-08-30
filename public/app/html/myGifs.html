@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link id="cssTheme" rel="stylesheet" type="text/css" href="../css/styles.css">
+    <title>gifOS project</title>
+</head>
+
+<body>
+    <header>
+        <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+    </header>
+    <section class="main-content">
+        <article class="nav">
+            <div class="gif-opt">
+                <img id="logo" class="gif-os" src="../../assets/images/gifOF_logo.png" alt="">
+                <div class="gif-opt-btn">
+                    <button class="btn btn-1">
+                        <p class="text-btn" href="">Crear Guifos</p>
+                    </button>
+                    <div id="themes-cont" class="btn-theme-cont">
+                        <button onclick="dispChangeThemes()" class="btn btn-2">
+                            <p class="text-btn">Elegir tema</p>
+                        </button>
+                        <button onclick="dispChangeThemes()" class="btn img-cont">
+                            <div class="img-cont-dot"><img id="dropdown" src="../../assets/images/dropdown.svg" alt=""
+                                    srcset=""></div>
+                        </button>
+                        <div id="themes" class="themes">
+                            <button onclick="changeThemeDay()" class="sailorday"><span class="my-gif-und">S</span>ailor
+                                Day</button>
+                            <button onclick="changeThemeNight()" class="sailornight"><span
+                                    class="my-gif-und">S</span>ailor Night</button>
+                        </div>
+                    </div>
+                    <a class="my-gif" href="#"><span class="my-gif-und">M</span>is Guifos</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!--Suggestion section-->
+    <section id="suggestion" class="main-content sugg my-gif-sec">
+        <article class="sugg-head">
+            <p>Mis guifos</p>
+        </article>
+        <article id="suggParent" class="sugg-cont">
+            <!--This section is filled with Javascript-->
+        </article>
+    </section>
+    <script src="../js/parameters.js"></script>
+    <script src="../js/changeStyles.js"></script>
+    <script src="../js/consumo-api.js"></script>
+    <script src="../js/myGifs.js"></script>
+</body>
+
+</html>

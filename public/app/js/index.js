@@ -78,13 +78,13 @@ search.oninput = (event) => {
 
 /*-----------Search gifs-------------*/
 
-let searchGifs = () => {
+let searchGifs = (param) => {
     hideSuggOnSearch()
     styleSearchBar(0)
 
     let query = document.getElementById('search').value
 
-    //Cliean current tend section
+    //Clean current tend section
     let tendParent = document.getElementById("tendParent")
     tendParent.innerHTML = ''
 
@@ -114,7 +114,7 @@ let searchGifs = () => {
 }
 
 
-
+/*----------- Change Themes calling the function in the HTML -------------*/
 let dispChangeThemes = () => {
     let them = document.getElementById('themes')
     if (!them.classList.contains('open')) {
@@ -126,14 +126,29 @@ let dispChangeThemes = () => {
 
 let changeThemeNight = () => {
     let cssLink = document.getElementById('cssTheme')
-    cssLink.setAttribute('href', 'assets/css/stylesNight.css')
+    cssLink.setAttribute('href', 'public/app/css/stylesNight.css')
     hideChangeTheme()
     changeImagesThemes()
 }
 
 let changeThemeDay = () => {
     let cssLink = document.getElementById('cssTheme')
-    cssLink.setAttribute('href', 'assets/css/styles.css')
+    cssLink.setAttribute('href', 'public/app/css/styles.css')
     hideChangeTheme()
     changeImagesThemes()
 }
+
+/*---------- Refresh Page on logo with event listener ----------------*/
+const refresh = document.getElementById("logo")
+refresh.addEventListener('click', () => {
+    window.location.reload()
+})
+
+
+/*---------- load create gifs with event listener ----------------*/
+const creatGifs = document.getElementById("create-gifs")
+creatGifs.addEventListener('click', () => {
+    location.href('create.html')
+})
+
+/*---------- Search when click on suggestion ----------------*/
