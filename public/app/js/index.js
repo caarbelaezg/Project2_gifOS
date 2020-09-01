@@ -16,8 +16,7 @@ window.onload = () => {
         let tags = response.data[0].title.split(" ", 3);
         suggChild =
           suggChild +
-          `
-            <div class="sugg-item">
+          ` <div class="sugg-item">
                 <div class="sugg-item-head">
                     <p class="sugg-text">#${tags[0]} #${tags[1]}</p>
                     <img src="assets/images/button3.svg" alt="">
@@ -130,39 +129,44 @@ let searchGifs = (param) => {
       let tags = jsonElement.title.split(" ", 3);
       tendChild =
         tendChild +
-        `
-            <div class="sugg-item tend-item">
-                <div class="tend-img-cont">
-                    <img class="sugg-img" src="${url}" alt="">
-                </div>
-                <div class="tend-item-head">
-                    <p class="tend-text">#${tags[0]} #${tags[1]} #${tags[2]}</p>
-                </div>
-            </div>
-            `;
+        `<div class="sugg-item tend-item">
+              <div class="tend-img-cont">
+                  <img class="sugg-img" src="${url}" alt="">
+              </div>
+              <div class="tend-item-head">
+                  <p class="tend-text">#${tags[0]} #${tags[1]} #${tags[2]}</p>
+              </div>
+          </div>`;
       tendParent.innerHTML = tendChild;
     });
   });
 };
 
 /*----------- Change Themes calling the function in the HTML -------------*/
-let dispChangeThemes = () => {
-  let them = document.getElementById("themes");
-  if (!them.classList.contains("open")) {
+const sharedButton = document.getElementById("themes-container");
+sharedButton.addEventListener("click", () => {
+  
+  const them = document.getElementById("themes");
+  if (them.classList.contains("close")) {
     them.classList.add("open");
+    them.classList.remove("close");
   } else {
     them.classList.remove("open");
+    them.classList.add("close");
   }
-};
 
-let changeThemeNight = () => {
+});
+
+const dispChangeThemes = () => {};
+
+const changeThemeNight = () => {
   let cssLink = document.getElementById("cssTheme");
   cssLink.setAttribute("href", "public/app/css/stylesNight.css");
   hideChangeTheme();
   changeImagesThemes();
 };
 
-let changeThemeDay = () => {
+const changeThemeDay = () => {
   let cssLink = document.getElementById("cssTheme");
   cssLink.setAttribute("href", "public/app/css/styles.css");
   hideChangeTheme();
@@ -175,8 +179,3 @@ refresh.addEventListener("click", () => {
   window.location.reload();
 });
 
-/*---------- load create gifs with event listener ----------------*/
-const creatGifs = document.getElementById("create-gifs");
-creatGifs.addEventListener("click", () => {
-  location.href("create.html");
-});

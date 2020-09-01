@@ -77,7 +77,8 @@ header {
 }
 
 .btn:hover p,
-.themes-container:hover .btn p {
+.themes-container:hover .btn p,
+.themes-container:active .btn p {
   border: 1px dotted #110038;
 }
 
@@ -91,7 +92,6 @@ header {
 
 .navigation .opt-container .themes-container .themes {
   position: absolute;
-  display: none;
   flex-flow: column;
 }
 .navigation .opt-container .btn-drop {
@@ -109,6 +109,50 @@ header {
   color: #110038;
   font-size: 16px;
   font-family: "Chakra Petch";
+}
+
+.themes {
+  height: 102px;
+  width: 99%;
+  top: 37px;
+  left: 0;
+  align-items: center;
+  justify-content: space-around;
+  background: #e6e6e6;
+  box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+  z-index: 1;
+}
+
+.themes .sailorday {
+  width: 150px;
+  height: 36px;
+  font-family: "Chakra Petch";
+  background: #fff4fd;
+  border: 1px solid #cca6c9;
+  box-shadow: inset -1px -1px 0 0 #e6dce4, inset 1px 1px 0 0 #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themes .sailornight {
+  width: 150px;
+  height: 36px;
+  font-family: "Chakra Petch";
+  background: #f0f0f0;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close {
+  display: none;
+}
+
+.open {
+  display: flex;
 }
 
 /*------SEARCH BAR-------*/
@@ -206,7 +250,8 @@ header {
   align-items: center;
   font-family: "Chakra Petch";
 }
-/*--------SUGGESTIONS------------*/
+
+/*--------Suggestion section------------*/
 
 .sugg {
   padding-top: 0;
