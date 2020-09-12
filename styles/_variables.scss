@@ -1,0 +1,42 @@
+//Day theme variables
+$font: "Chakra Petch", sans-serif;
+$regular: 400;
+$bold: 600;
+
+//Elements defined on state: Normal -  Hover or Active
+
+//Buttons
+$day-button-normal-pink: #f7c9f3;
+$day-button-hovact-pink: #e6bbe2;
+$day-button-normal-palepink: #fff4fd;
+
+$day-button-normal-gray: #f0f0f0;
+$day-pushed-button-gray: #808080;
+$day-inactive-gray: #b4b4b4;
+
+//Boxes
+$day-box-background: #e6e6e6;
+
+//Gradient on title header
+$day-gradient: linear-gradient(
+  270deg,
+  $day-button-normal-pink 0%,
+  #4180f6 100%
+);
+
+$white: #fff0fe;
+$black: #110038;
+
+//Border of nav buttons
+$day-button-border: 1px solid $black;
+
+//Shadows
+$day-box-shadow-1-pink: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #80687d;
+$day-box-shadow-1-gray: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+$day-box-shadow-1-black: 0 1px 0 0 $black;
+$day-box-shadow-2-black: inset -0.14rem -0.14rem 0 0 #f0f0f0, inset 0.14rem 0.14rem 0 0 $black;
+
+$day-button-sailorday-shadow: inset -1px -1px 0 0 #e6dce4,
+  inset 1px 1px 0 0 #ffffff;
+$day-button-sailornite-shadow: inset -1px -1px 0 0 #b4b4b4,
+  inset 1px 1px 0 0 #ffffff;

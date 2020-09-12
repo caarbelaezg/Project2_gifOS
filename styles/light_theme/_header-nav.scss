@@ -1,0 +1,116 @@
+header {
+  @include titles__container;
+  box-shadow: $day-box-shadow-1-black;
+  padding: 0 0.4rem;
+
+  h1 {
+    color: $white;
+    font-family: $font;
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+}
+
+//general styles header buttons
+.create__guifo,
+.theme__button,
+.theme__button_dpd {
+  @include button;
+  height: 36px;
+  font-size: 16px;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1400px;
+  margin: 2% 5%;
+  .navigtation__buttons {
+    display: flex;
+    width: 430px;
+    align-items: center;
+    justify-content: space-between;
+    .create__guifo {
+      width: 144px;
+    }
+    .theme__button__container {
+      display: flex;
+      position: relative;
+      width: fit-content;
+      .theme__button {
+        width: 131px;
+      }
+      .theme__button_dpd {
+        width: 36px;
+      }
+      .dropdown__themes {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        justify-content: space-around;
+        top: 36px;
+        height: 102px;
+        width: 100%;
+        background-color: $day-box-background;
+        box-shadow: $day-box-shadow-1-gray;
+        li {
+          list-style: none;
+          & > button {
+            height: 36px;
+            width: 150px;
+            font-size: 16px;
+            font-family: $font;
+            display: flex;
+            align-items: center;
+            padding-left: 10%;
+          }
+          .theme__button__day {
+            background-color: $day-button-normal-palepink;
+            box-shadow: $day-button-sailorday-shadow;
+            border: 1px solid #cca6c9;
+          }
+          .theme__button__nite {
+            background-color: $day-button-normal-gray;
+            box-shadow: $day-button-sailornite-shadow;
+            border: 1px solid #808080;
+          }
+        }
+      }
+    }
+    .mis__guifos {
+      background-color: transparent;
+      font-family: $font;
+      font-size: 16px;
+      position: relative;
+    }
+    .mis__guifos:active{
+        color: #808080;
+    }
+    .mis__guifos:hover::before {
+      @include dotted__frame;
+    }
+  }
+}
+
+.create__guifo:hover {
+  background-color: $day-button-hovact-pink;
+}
+
+.theme__button__container:hover .theme__button,
+.theme__button__container:hover .theme__button_dpd {
+  background-color: $day-button-hovact-pink;
+}
+.create__guifo:hover::before {
+  @include dotted__frame;
+}
+
+.theme__button__container:hover .theme__button::before {
+  @include dotted__frame;
+}
+
+.theme__button__container:hover .theme__button_dpd::before {
+  @include dotted__frame;
+}

@@ -1,0 +1,348 @@
+html {
+  font-size: 14px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.sailor__day {
+  background-color: #fff0fe;
+}
+
+.sailor__day header {
+  background-image: -webkit-gradient(linear, right top, left top, from(#f7c9f3), to(#4180f6));
+  background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
+  height: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 1px 0 0 #110038;
+          box-shadow: 0 1px 0 0 #110038;
+  padding: 0 0.4rem;
+}
+
+.sailor__day header h1 {
+  color: #fff0fe;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.sailor__day .create__guifo,
+.sailor__day .theme__button,
+.sailor__day .theme__button_dpd {
+  border: 1px solid #110038;
+  background-color: #f7c9f3;
+  font-family: "Chakra Petch", sans-serif;
+  height: 36px;
+  font-size: 16px;
+  position: relative;
+}
+
+.sailor__day nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1400px;
+  margin: 2% 5%;
+}
+
+.sailor__day nav .navigtation__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 430px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sailor__day nav .navigtation__buttons .create__guifo {
+  width: 144px;
+}
+
+.sailor__day nav .navigtation__buttons .theme__button__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.sailor__day nav .navigtation__buttons .theme__button__container .theme__button {
+  width: 131px;
+}
+
+.sailor__day nav .navigtation__buttons .theme__button__container .theme__button_dpd {
+  width: 36px;
+}
+
+.sailor__day nav .navigtation__buttons .theme__button__container .dropdown__themes {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  top: 36px;
+  height: 102px;
+  width: 100%;
+  background-color: #e6e6e6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+          box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+}
+
+.sailor__day nav .navigtation__buttons .theme__button__container .dropdown__themes li {
+  list-style: none;
+}
+
+.sailor__day nav .navigtation__buttons .theme__button__container .dropdown__themes li > button {
+  height: 36px;
+  width: 150px;
+  font-size: 16px;
+  font-family: "Chakra Petch", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10%;
+}
+
+.sailor__day nav .navigtation__buttons .theme__button__container .dropdown__themes li .theme__button__day {
+  background-color: #fff4fd;
+  -webkit-box-shadow: inset -1px -1px 0 0 #e6dce4, inset 1px 1px 0 0 #ffffff;
+          box-shadow: inset -1px -1px 0 0 #e6dce4, inset 1px 1px 0 0 #ffffff;
+  border: 1px solid #cca6c9;
+}
+
+.sailor__day nav .navigtation__buttons .theme__button__container .dropdown__themes li .theme__button__nite {
+  background-color: #f0f0f0;
+  -webkit-box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+          box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+  border: 1px solid #808080;
+}
+
+.sailor__day nav .navigtation__buttons .mis__guifos {
+  background-color: transparent;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 16px;
+  position: relative;
+}
+
+.sailor__day nav .navigtation__buttons .mis__guifos:active {
+  color: #808080;
+}
+
+.sailor__day nav .navigtation__buttons .mis__guifos:hover::before {
+  border: 1px dotted #110038;
+  position: absolute;
+  content: '';
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+}
+
+.sailor__day .create__guifo:hover {
+  background-color: #e6bbe2;
+}
+
+.sailor__day .theme__button__container:hover .theme__button,
+.sailor__day .theme__button__container:hover .theme__button_dpd {
+  background-color: #e6bbe2;
+}
+
+.sailor__day .create__guifo:hover::before {
+  border: 1px dotted #110038;
+  position: absolute;
+  content: '';
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+}
+
+.sailor__day .theme__button__container:hover .theme__button::before {
+  border: 1px dotted #110038;
+  position: absolute;
+  content: '';
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+}
+
+.sailor__day .theme__button__container:hover .theme__button_dpd::before {
+  border: 1px dotted #110038;
+  position: absolute;
+  content: '';
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+}
+
+.sailor__day .search {
+  height: 99px;
+  width: 1400px;
+  position: relative;
+  background-color: #e6e6e6;
+  margin: 2% 5%;
+  -webkit-box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+          box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+  padding: 2px;
+}
+
+.sailor__day .search .search__title {
+  background-image: -webkit-gradient(linear, right top, left top, from(#f7c9f3), to(#4180f6));
+  background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
+  height: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff0fe;
+  font-size: 14px;
+  font-family: "Chakra Petch", sans-serif;
+  padding-left: 0.5%;
+}
+
+.sailor__day .search .search__bar__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1%;
+}
+
+.sailor__day .search .search__bar__container .search__bar {
+  height: 48px;
+  width: 1230px;
+  -webkit-box-shadow: inset -0.14rem -0.14rem 0 0 #f0f0f0, inset 0.14rem 0.14rem 0 0 #110038;
+          box-shadow: inset -0.14rem -0.14rem 0 0 #f0f0f0, inset 0.14rem 0.14rem 0 0 #110038;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 16px;
+  color: #b4b4b4;
+  padding-left: 1%;
+}
+
+.sailor__day .search .search__bar__container #search__button {
+  height: 36px;
+  width: 102px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 16px;
+  color: #b4b4b4;
+  -webkit-box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+          box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+.sailor__day .search .search__bar__container #search__button .lupa {
+  display: none;
+}
+
+.sailor__day .search .search__bar__container #search__button :active {
+  border: 1px dotted #110038;
+  position: absolute;
+  content: '';
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  background-color: #f7c9f3;
+  color: #110038;
+}
+
+.sailor__day .search .search__suggestion__container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  top: 103px;
+  left: 0;
+  height: 160px;
+  width: 100%;
+  -webkit-box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+          box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+  background-color: #e6e6e6;
+}
+
+.sailor__day .search .search__suggestion__container li {
+  list-style: none;
+  height: 36px;
+  background-color: #f0f0f0;
+  margin-left: 1%;
+  width: 1245px;
+  -webkit-box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+          box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+}
+
+.sailor__day .search .search__suggestion__container li a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-left: 1%;
+  padding-top: 0.5%;
+  color: #110038;
+  font-family: "Chakra Petch", sans-serif;
+  cursor: pointer;
+}
+
+.sailor__day .search .search__suggestion__container li a :hover::before {
+  border: 1px dotted #110038;
+  position: absolute;
+  content: '';
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+}
+/*# sourceMappingURL=styles.css.map */
