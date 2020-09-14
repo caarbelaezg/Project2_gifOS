@@ -412,6 +412,19 @@ html {
   height: 14px;
 }
 
+.sailor__day .suggestions .gif__suggestion__container .suggested__gif__container .suggested__gif__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 93%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .sailor__day .suggestions .gif__suggestion__container .suggested__gif__container .see__more {
   position: absolute;
   left: 5%;
