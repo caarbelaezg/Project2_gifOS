@@ -6,6 +6,7 @@ html {
   padding: 0;
   margin: 0;
   border: 0;
+
 }
 
 @import "styles/_variables.scss";
@@ -14,5 +15,6 @@ html {
   background-color: $white;
   @import "styles/light_theme/_mixins.scss";
   @import "styles/light_theme/_header-nav.scss";
-  @import "styles/light_theme/_search.scss"
+  @import "styles/light_theme/_search.scss";
+  @import "styles/light_theme/_suggestions.scss"
 }

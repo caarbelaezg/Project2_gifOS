@@ -14,6 +14,8 @@ $day-button-normal-gray: #f0f0f0;
 $day-pushed-button-gray: #808080;
 $day-inactive-gray: #b4b4b4;
 
+$day-blue: #4180f6;
+
 //Boxes
 $day-box-background: #e6e6e6;
 
@@ -21,10 +23,10 @@ $day-box-background: #e6e6e6;
 $day-gradient: linear-gradient(
   270deg,
   $day-button-normal-pink 0%,
-  #4180f6 100%
+  $day-blue 100%
 );
 
-$white: #fff0fe;
+$white: #ffffff;
 $black: #110038;
 
 //Border of nav buttons
@@ -34,8 +36,10 @@ $day-button-border: 1px solid $black;
 $day-box-shadow-1-pink: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #80687d;
 $day-box-shadow-1-gray: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
 $day-box-shadow-1-black: 0 1px 0 0 $black;
-$day-box-shadow-2-black: inset -0.14rem -0.14rem 0 0 #f0f0f0, inset 0.14rem 0.14rem 0 0 $black;
+$day-box-shadow-2-black: inset -0.14rem -0.14rem 0 0 #f0f0f0,
+  inset 0.14rem 0.14rem 0 0 $black;
 
+$day-box-shadow-1-blue: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
 $day-button-sailorday-shadow: inset -1px -1px 0 0 #e6dce4,
   inset 1px 1px 0 0 #ffffff;
 $day-button-sailornite-shadow: inset -1px -1px 0 0 #b4b4b4,

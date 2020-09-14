@@ -9,7 +9,7 @@ html {
 }
 
 .sailor__day {
-  background-color: #fff0fe;
+  background-color: #ffffff;
 }
 
 .sailor__day header {
@@ -28,7 +28,7 @@ html {
 }
 
 .sailor__day header h1 {
-  color: #fff0fe;
+  color: #ffffff;
   font-family: "Chakra Petch", sans-serif;
   font-size: 12px;
   letter-spacing: 0;
@@ -227,7 +227,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fff0fe;
+  color: #ffffff;
   font-size: 14px;
   font-family: "Chakra Petch", sans-serif;
   padding-left: 0.5%;
@@ -294,9 +294,7 @@ html {
 
 .sailor__day .search .search__suggestion__container {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -333,16 +331,107 @@ html {
   padding-top: 0.5%;
   color: #110038;
   font-family: "Chakra Petch", sans-serif;
-  cursor: pointer;
+  cursor: auto;
 }
 
-.sailor__day .search .search__suggestion__container li a :hover::before {
-  border: 1px dotted #110038;
+.sailor__day .suggestions {
+  height: 99px;
+  width: 1400px;
+  height: 100px;
+  margin-top: 50px;
+  position: relative;
+  margin: 2% 5%;
+}
+
+.sailor__day .suggestions .suggestion__announce {
+  height: 32px;
+  width: 100%;
+  background-color: white;
+  -webkit-box-shadow: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #80687d;
+          box-shadow: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #80687d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.sailor__day .suggestions .suggestion__announce p {
+  font-family: "Chakra Petch", sans-serif;
+  height: 18px;
+  padding-left: 1%;
+}
+
+.sailor__day .suggestions .gif__suggestion__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sailor__day .suggestions .gif__suggestion__container .suggested__gif__container {
+  height: 323px;
+  width: 288px;
+  background-color: #e6e6e6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+          box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+  padding: 0.25%;
+  position: relative;
+}
+
+.sailor__day .suggestions .gif__suggestion__container .suggested__gif__container .hashtag__bar {
+  background-image: -webkit-gradient(linear, right top, left top, from(#f7c9f3), to(#4180f6));
+  background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 24px;
+  padding: 0 1%;
+}
+
+.sailor__day .suggestions .gif__suggestion__container .suggested__gif__container .hashtag__bar h4 {
+  font-family: "Chakra Petch", sans-serif;
+  color: #ffffff;
+}
+
+.sailor__day .suggestions .gif__suggestion__container .suggested__gif__container .hashtag__bar img {
+  width: 16px;
+  height: 14px;
+}
+
+.sailor__day .suggestions .gif__suggestion__container .suggested__gif__container .see__more {
   position: absolute;
-  content: '';
-  top: 1px;
-  left: 1px;
-  right: 1px;
-  bottom: 1px;
+  left: 5%;
+  bottom: 5%;
+  height: 34px;
+  width: 81px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #4180f6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
+          box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
+  font-family: "Chakra Petch", sans-serif;
+  color: #ffffff;
+  font-size: 14px;
 }
 /*# sourceMappingURL=styles.css.map */
