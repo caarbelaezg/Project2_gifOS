@@ -1,24 +1,12 @@
 .suggestions {
-  height: 99px;
   width: 1400px;
-  height: 100px;
+  height: fit-content;
   margin-top: 50px;
   position: relative;
   margin: 2% 5%;
 
   .suggestion__announce {
-    height: 32px;
-    width: 100%;
-    background-color: white;
-    box-shadow: $day-box-shadow-1-pink;
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    p {
-      font-family: $font;
-      height: 18px;
-      padding-left: 1%;
-    }
+    @include intro__generic;
   }
 
   .gif__suggestion__container{
