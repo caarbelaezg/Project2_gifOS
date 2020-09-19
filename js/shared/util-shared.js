@@ -61,11 +61,11 @@ const setUrl = (url) => {
 };
 
 const htmlChange = () => {
-  document.getElementById("mis-guifos").onclick = () => {
-    setUrl("mis-guifos.html");
+  document.getElementById("mis__guifos").onclick = () => {
+    setUrl("mis_guifos.html");
   };
-  document.getElementById("crear-button").onclick = () => {
-    setUrl("crear-guifos.html");
+  document.getElementById("create__guifo").onclick = () => {
+    setUrl("crear_guifos.html");
   };
 };
 

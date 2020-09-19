@@ -1,6 +1,6 @@
 header {
   @include titles__container;
-  box-shadow: $day-box-shadow-1-black;
+  box-shadow: $night-box-shadow-1-black;
   padding: 0 0.4rem;
 
   h1 {
@@ -54,9 +54,8 @@ nav {
         top: 36px;
         height: 102px;
         width: 100%;
-        background-color: $day-box-background;
-        box-shadow: $day-box-shadow-1-gray;
-        z-index: 1;
+        background-color: $night-box-background;
+        box-shadow: $night-box-shadow-1-gray;
         li {
           list-style: none;
           & > button {
@@ -69,13 +68,13 @@ nav {
             padding-left: 10%;
           }
           .theme__button__day {
-            background-color: $day-button-normal-palepink;
-            box-shadow: $day-button-sailorday-shadow;
+            background-color: $night-button-normal-palepink;
+            box-shadow: $night-button-sailornight-shadow;
             border: 1px solid #cca6c9;
           }
           .theme__button__nite {
-            background-color: $day-button-normal-gray;
-            box-shadow: $day-button-sailornite-shadow;
+            background-color: $night-button-normal-gray;
+            box-shadow: $night-button-sailornite-shadow;
             border: 1px solid #808080;
           }
         }
@@ -97,12 +96,12 @@ nav {
 }
 
 .create__guifo:hover {
-  background-color: $day-button-hovact-pink;
+  background-color: $night-button-hovact-pink;
 }
 
 .theme__button__container:hover .theme__button,
 .theme__button__container:hover .theme__button_dpd {
-  background-color: $day-button-hovact-pink;
+  background-color: $night-button-hovact-pink;
 }
 .create__guifo:hover::before {
   @include dotted__frame;

@@ -38,15 +38,15 @@ const loadSuggestedGifs = () => {
 const searchOnVerMas = () => {
     seeMoreBtns.forEach((element, index) => {
     element.onclick = () => {
-      loadSection(SEARCH + defaultTerms[index], "result-gifs-container");
+      loadSection(SEARCH + defaultTerms[index], "result__gifs__container");
       sessionSearches.unshift(defaultTerms[index]);
       sessionStorage.setItem(
         "sessionSearches",
         JSON.stringify(sessionSearches)
       );
-      document.getElementById("results-intro").innerHTML =
+      document.getElementById("results__intro").innerHTML =
         "Resultados: (" + defaultTerms[index] + ")";
-      const resultsSection = document.getElementById("results-section");
+      const resultsSection = document.getElementById("results");
       resultsSection.style.display = "block";
       resultsSection.scrollIntoView();
       loadRecentSearches();

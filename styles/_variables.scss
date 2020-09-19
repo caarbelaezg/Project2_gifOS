@@ -44,3 +44,46 @@ $day-button-sailorday-shadow: inset -1px -1px 0 0 #e6dce4,
   inset 1px 1px 0 0 #ffffff;
 $day-button-sailornite-shadow: inset -1px -1px 0 0 #b4b4b4,
   inset 1px 1px 0 0 #ffffff;
+
+
+//Nigth Variables
+
+//Buttons
+$night-button-normal-pink: #ee3efe;
+$night-button-hovact-pink:#ce36db;
+$night-button-normal-palepink: #fff4fd;
+
+$night-button-normal-gray:#808080;
+$night-pushed-button-gray: #818181;
+$night-inactive-gray: #b4b4b4;
+
+$night-blue: #2e32fb;
+
+//Boxes
+$night-box-background: #b4b4b4;
+
+//Gradient on title header
+$night-gradient: linear-gradient(
+  270deg,
+  $night-button-normal-pink 0%,
+  $night-blue 100%
+);
+
+$white: #ffffff;
+$black: #110038;
+
+//Border of nav buttons
+$night-button-border: 1px solid $black;
+
+//Shadows
+$night-box-shadow-1-pink: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #80687d;
+$night-box-shadow-1-gray: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+$night-box-shadow-1-black: 0 1px 0 0 $black;
+$night-box-shadow-2-black: inset -0.14rem -0.14rem 0 0 #f0f0f0,
+  inset 0.14rem 0.14rem 0 0 $black;
+
+$night-box-shadow-1-blue: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
+$night-button-sailornight-shadow: inset -1px -1px 0 0 #e6dce4,
+  inset 1px 1px 0 0 #ffffff;
+$night-button-sailornite-shadow: inset -1px -1px 0 0 #b4b4b4,
+  inset 1px 1px 0 0 #ffffff;

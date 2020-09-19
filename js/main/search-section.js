@@ -13,14 +13,12 @@ const setSearchSection = () => {
       searchButton.removeAttribute("class");
       searchButton.disabled = true;
     } else {
-      document.getElementById("search__suggestion__container").style.display = "block";
+      document.getElementById("search__suggestion__container").style.display = "flex";
       searchButton.setAttribute("class", "search-button-focus");
       searchButton.disabled = false;
     }
   };
-  document.getElementById("close-onsearch").onclick = () => {
-    document.getElementById("search__suggestion__container").style.display = "none";
-  };
+
 };
 
 //search on search button click
@@ -39,13 +37,13 @@ const searchOnButtonPress = () => {
 const inputSearch = () => {
   const searchTerm = document.getElementById("search__input").value;
   const searchUrl = SEARCH + searchTerm;
-  loadSection(searchUrl, "result-gifs-container");
+  loadSection(searchUrl, "result__gifs__container");
   sessionSearches.unshift(searchTerm);
   sessionStorage.setItem("sessionSearches", JSON.stringify(sessionSearches));
   document.getElementById("results-intro").innerHTML =
     "Resultados: (" + searchTerm + ")";
-  const resultsSection = document.getElementById("results-section");
-  resultsSection.style.display = "block";
+  const resultsSection = document.getElementById("results");
+  resultsSection.style.display = "flex";
   resultsSection.scrollIntoView();
   const onSearch = document.getElementById("search__suggestion__container");
   onSearch.style.display = "none";
@@ -95,57 +93,30 @@ const searchSuggestionBased = () => {
   ];
   suggestionAarray.forEach((element) => {
     element.onclick = () => {
-      loadSection(SEARCH + element.innerHTML, "result-gifs-container");
+      loadSection(SEARCH + element.innerHTML, "result__gifs__container");
       sessionSearches.unshift(element.innerHTML);
       sessionStorage.setItem(
         "sessionSearches",
         JSON.stringify(sessionSearches)
       );
-      document.getElementById("results-intro").innerHTML =
+      document.getElementById("results__intro").innerHTML =
         "Resultados: (" + element.innerHTML + ")";
       document.getElementById("search__input").value = "";
       const onSearch = document.getElementById("search__suggestion__container");
       onSearch.style.display = "none";
       searchButton.removeAttribute("class");
       searchButton.disabled = true;
-      const resultsSection = document.getElementById("results-section");
+      const resultsSection = document.getElementById("results");
       resultsSection.style.display = "block";
       resultsSection.scrollIntoView();
-      loadRecentSearches();
     };
   });
 };
 
-//load search history
-const loadRecentSearches = () => {
-  const buttonsContainer = document.getElementById("results-buttons-container");
-  buttonsContainer.style.display = "block";
-  const recent = JSON.parse(sessionStorage.getItem("sessionSearches"));
-  if (!recent) {
-    buttonsContainer.style.display = "none";
-  } else {
-    buttonsContainer.innerHTML = "";
-    recent.forEach((element) => {
-      let recentButton = document.createElement("button");
-      recentButton.setAttribute("class", "result-button");
-      recentButton.innerHTML = "#" + element;
-      buttonsContainer.appendChild(recentButton);
-      recentButton.onclick = () => {
-        loadSection(SEARCH + element, "result-gifs-container");
-        document.getElementById("results-intro").innerHTML =
-          "Resultados: (" + element + ")";
-        let resultsSection = document.getElementById("results-section");
-        resultsSection.style.display = "block";
-        resultsSection.scrollIntoView();
-      };
-    });
-  }
-};
 
 const loadSearchSection = () => {
   setSearchSection();
   loadAutocomplete();
   searchOnButtonPress();
   searchSuggestionBased();
-  loadRecentSearches();
 };
