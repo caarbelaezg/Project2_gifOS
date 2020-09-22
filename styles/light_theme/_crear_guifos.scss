@@ -1,0 +1,77 @@
+header {
+  @include titles__container;
+  box-shadow: $day-box-shadow-1-black;
+  padding: 0 0.4rem;
+
+  h1 {
+    color: $white;
+    font-family: $font;
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+}
+
+.bold__word {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.record__section {
+  .crear__window {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 15rem;
+    font-family: $font;
+    background-color: $day-box-background;
+    box-shadow: $day-box-shadow-1-gray;
+    .window__top__bar {
+      @include titles__container;
+      color: $white;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      padding-left: 1%;
+      margin: 2px;
+    }
+    .window__title__container {
+      display: flex;
+      padding: 5%;
+      width: 300px;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .instructions {
+      padding-left: 10%;
+    }
+
+    .empezar__terminar__btn__container {
+      display: flex;
+      align-self: flex-end;
+      padding: 5%;
+      width: 400px;
+      justify-content: space-around;
+      button {
+        position: relative;
+        height: 36px;
+        width: 144px;
+        &:hover::before {
+          @include dotted__frame;
+        }
+      }
+      :first-child {
+        background:$day-button-normal-palepink;
+        border: 1px solid $black;
+        box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+      }
+      :nth-child(2) {
+        background: $day-button-normal-pink;
+        border: 1px solid $black;
+        box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+      }
+    }
+    .done__window__container {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GifOS</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="body__theme" class="sailor__day">
+    <header>
+      <h1>
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+        de visitas: 12.765.803
+      </h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">
+        <img src="images/arrow.svg" alt="" />
+        <img src="images/gifOF_logo.png" alt="Guifo logo" />
+      </a>
+      <div id="navigtation__buttons" class="navigtation__buttons">
+        <button id="create__guifo" class="create__guifo">Crear Guifos</button>
+        <div class="theme__button__container">
+          <button id="theme__button" class="theme__button">Elegir tema</button>
+          <button class="theme__button_dpd" id="theme__button_dpd">
+            <img src="images/dropdown.svg" alt="dropdown arrow" />
+          </button>
+          <ul class="dropdown__themes" id="dropdown__themes">
+            <li>
+              <button id="theme__button__day" class="theme__button__day">
+                <u>S</u>ailor day
+              </button>
+            </li>
+            <li>
+              <button id="theme__button__nite" class="theme__button__nite">
+                <u>S</u>ailor Night
+              </button>
+            </li>
+          </ul>
+        </div>
+        <button id="mis__guifos" class="mis__guifos"><u>M</u>is Guifos</button>
+      </div>
+    </nav>
+
+    <section id="record__section" class="record__section">
+      <div id="crear__window" class="crear__window">
+        <h2 class="window__top__bar">Crear gifos</h2>
+        <div id="window__title__container" class="window__title__container">
+          <img src="images/window_img.png" alt="" />
+          <p><strong>Aquí podrás crear tus propios guifos</strong></p>
+        </div>
+        <p id="crear__instructions" class="instructions">
+          Crear tu <span class="bold__word">guifo</span> es muy fácil, graba
+          cualquier imagen con tu cámara y obtén guifos personalizados. Los
+          pasos para crear tu guifo son: <br />
+          <br />
+          <strong>1)</strong> Dar permisos de acceso a la cámara (sólo por el
+          tiempo de uso) <br />
+          <br /><strong>2)</strong> Capturar tu momento guifo <br />
+          <br />
+          <strong>3)</strong> Revisar el momento <br />
+          <br /><strong>4)</strong> Listo para subir y compartir!<br />
+          <br />
+          ¿Quieres comenzar a crear tu
+          <span class="bold__word">guifo</span> ahora?
+        </p>
+        <div
+          id="empezar__terminar__btn__container"
+          class="empezar__terminar__btn__container"
+        >
+          <button class="cancel" id="cancel">Cancelar</button>
+          <button class="start" id="start">Comenzar</button>
+        </div>
+        <div id="done__window__container" class="done__window__container">
+          <div class="img__buttons__container">
+            <div class="uploaded__preview__background">
+              <img
+                id="uploaded__preview"
+                class="uploaded__preview"
+                src="#"
+                alt="test"
+              />
+            </div>
+            <div class="done__buttons__container">
+              <h3>Guifo creado con éxito!!!</h3>
+              <button id="copy__link__button" class="download__copy__button">
+                Copiar Enlace Giphy
+              </button>
+              <button id="download__button" class="download__copy__button">
+                <a href="#" id="file__link" download="My_Guifo"
+                  >Download Guifo</a
+                >
+              </button>
+              <button id="done__button" class="done__button">Listo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="record__window" class="record__window">
+        <div class="title__bar">
+          <h2>Un chequeo antes de empezar</h2>
+          <img src="images/button_close.svg" alt="exit" />
+        </div>
+        <div id="preview__background" class="preview__background">
+          <video id="preview" class="preview"></video>
+          <img
+            id="recorded__preview"
+            class="recorded__preview preview"
+            src="#"
+            alt="test"
+          />
+          <div class="uploading__container" id="uploading__container">
+            <img class="globe__img" src="images/globe_img.png" alt="globe" />
+            <h3 class="uploading__title">Estamos subiendo tu guifo</h3>
+            <div class="progress__container" id="progress"></div>
+            <p class="time__left">
+              Tiempo restante: <s>38 años</s> algunos minutos
+            </p>
+          </div>
+        </div>
+        <button id="record__button" class="record__button">
+          <img src="images/camera.svg" alt="" /><span>Capturar</span>
+        </button>
+        <div id="time__stop__container" class="time__stop__container">
+          <p id="time__elapsed" class="time__elapsed"></p>
+          <button id="stop__button" class="stop__button">
+            <img src="images/recording.svg" alt="" /><span>Listo</span>
+          </button>
+        </div>
+        <div id="upload__repeat__container" class="upload__repeat__container">
+          <button id="repeat__button">Repetir captura</button>
+          <button id="upload">Subir guifo</button>
+        </div>
+        <button id="cancel__button" class="record__button cancel__upload__button">
+          Cancelar
+        </button>
+      </div>
+    </section>
+    <section
+      id="mis__guifos__section"
+      class="template__section mis__guifos__section"
+    >
+      <div class="intro__section">
+        <h3>Mis Guifos</h3>
+      </div>
+      <h3 class="wrong__message" id="wrong">SOMETHING WENT WRONG :(</h3>
+      <div id="mis__guifos__container" class="template__gif__container"></div>
+    </section>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="js/shared/variables-shared.js"></script>
+    <script src="js/shared/helper-shared.js"></script>
+    <script src="js/crear/index-crear.js"></script>
+    <script src="js/crear/record-crear.js"></script>
+    <script src="js/shared/theme-shared.js"></script>
+  </body>
+</html>

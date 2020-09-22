@@ -65,7 +65,7 @@ const htmlChange = () => {
     setUrl("mis_guifos.html");
   };
   document.getElementById("create__guifo").onclick = () => {
-    setUrl("crear_guifos.html");
+    setUrl("crear_guifo.html");
   };
 };
 

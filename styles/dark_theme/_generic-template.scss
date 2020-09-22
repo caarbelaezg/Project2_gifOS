@@ -29,8 +29,8 @@
         }
       }
       &:hover {
-        background: $day-box-background;
-        box-shadow: $day-box-shadow-1-gray;
+        background: $night-box-background;
+        box-shadow: $night-box-shadow-1-gray;
         .gif__title{
           display: flex;
         }

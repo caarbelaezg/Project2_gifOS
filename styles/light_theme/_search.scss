@@ -1,6 +1,6 @@
 .search {
   height: 99px;
-  width: 1400px;
+  width: 90%;
   position: relative;
   background-color: $day-box-background;
   margin: 2% 5%;
@@ -21,7 +21,7 @@
     padding: 1%;
     .search__bar {
       height: 48px;
-      width: 1230px;
+      width: 90%;
       box-shadow: $day-box-shadow-2-black;
       font-family: $font;
       font-size: 16px;
