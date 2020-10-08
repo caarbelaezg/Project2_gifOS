@@ -3,87 +3,70 @@ $font: "Chakra Petch", sans-serif;
 $regular: 400;
 $bold: 600;
 
-//Elements defined on state: Normal -  Hover or Active
+$day-pink-button-normal: #f7c9f3;
+$day-pink-pushed-button: #e6bbe2;
+$day-palepink-button-normal: #fff4fd;
 
-//Buttons
-$day-button-normal-pink: #f7c9f3;
-$day-button-hovact-pink: #e6bbe2;
-$day-button-normal-palepink: #fff4fd;
+$day-gray-button-normal: #f0f0f0;
+$day-gray-pushed-button: #808080;
+$day-gray-inactive: #b4b4b4;
 
-$day-button-normal-gray: #f0f0f0;
-$day-pushed-button-gray: #808080;
-$day-inactive-gray: #b4b4b4;
+$day-gray-box-background: #e6e6e6;
 
-$day-blue: #4180f6;
-
-//Boxes
-$day-box-background: #e6e6e6;
-
-//Gradient on title header
+$day-gradient-blue: #4180f6;
 $day-gradient: linear-gradient(
-  270deg,
-  $day-button-normal-pink 0%,
-  $day-blue 100%
+  90deg,
+  $day-gradient-blue,
+  $day-pink-button-normal
 );
 
-$white: #ffffff;
+$white: #fff0fe;
 $black: #110038;
 
-//Border of nav buttons
-$day-button-border: 1px solid $black;
+$border: solid 0.07rem $black;
 
-//Shadows
-$day-box-shadow-1-pink: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #80687d;
-$day-box-shadow-1-gray: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
-$day-box-shadow-1-black: 0 1px 0 0 $black;
-$day-box-shadow-2-black: inset -0.14rem -0.14rem 0 0 #f0f0f0,
+$day-box-shadow-1-pink: inset -0.07rem -0.07rem 0 0 #997d97,
+  inset 0.07rem 0.07rem 0 0 $white;
+$day-box-shadow-1-gray: inset -0.07rem -0.07rem 0 0 #b4b4b4,
+  inset 0.07rem 0.07rem 0 0 $white;
+$day-box-shadow-2-gray: inset -0.14rem -0.14rem 0 0 #b4b4b4,
+  inset 0.14rem 0.14rem 0 0 $white;
+
+$day-box-shadow-2-black: inset -0.14rem -0.14rem 0 0 $day-gray-box-background,
   inset 0.14rem 0.14rem 0 0 $black;
 
-$day-box-shadow-1-blue: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
-$day-button-sailorday-shadow: inset -1px -1px 0 0 #e6dce4,
-  inset 1px 1px 0 0 #ffffff;
-$day-button-sailornite-shadow: inset -1px -1px 0 0 #b4b4b4,
-  inset 1px 1px 0 0 #ffffff;
+$day-box-shadow-section-intro: inset -0.07rem -0.07rem 0 0 #e6dce4,
+  inset 0.07rem 0.07rem 0 0 $white;
 
+//Night theme variables
 
-//Nigth Variables
+$night-pink-button-normal: #ee3efe;
+$night-pink-pushed-button: #ce36db;
+$night-pale-button-normal: $black;
 
-//Buttons
-$night-button-normal-pink: #ee3efe;
-$night-button-hovact-pink:#ce36db;
-$night-button-normal-palepink: #fff4fd;
+$night-gray-button-normal: #808080;
+$night-gray-pushed-button: #818181;
+$night-gray-inactive: #b4b4b4;
 
-$night-button-normal-gray:#808080;
-$night-pushed-button-gray: #818181;
-$night-inactive-gray: #b4b4b4;
+$night-gray-box-background: #b4b4b4;
 
-$night-blue: #2e32fb;
-
-//Boxes
-$night-box-background: #b4b4b4;
-
-//Gradient on title header
+$night-gradient-blue: #2e32fb;
 $night-gradient: linear-gradient(
-  270deg,
-  $night-button-normal-pink 0%,
-  $night-blue 100%
+  90deg,
+  $night-gradient-blue,
+  $night-pink-button-normal
 );
 
-$white: #ffffff;
-$black: #110038;
+$night-box-shadow-1-pink: inset -0.07rem -0.07rem 0 0 #a72cb3,
+  inset 0.07rem 0.07rem 0 0 $white;
+$night-box-shadow-1-gray: inset -0.07rem -0.07rem 0 0 #8f8f8f,
+  inset 0.07rem 0.07rem 0 0 $white;
+$night-box-shadow-2-gray: inset -0.14rem -0.14rem 0 0 #8f8f8f,
+  inset 0.14rem 0.14rem 0 0 $white;
 
-//Border of nav buttons
-$night-button-border: 1px solid $black;
-
-//Shadows
-$night-box-shadow-1-pink: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #80687d;
-$night-box-shadow-1-gray: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
-$night-box-shadow-1-black: 0 1px 0 0 $black;
-$night-box-shadow-2-black: inset -0.14rem -0.14rem 0 0 #f0f0f0,
+$night-box-shadow-2-black: inset -0.14rem -0.14rem 0 0
+    $night-gray-box-background,
   inset 0.14rem 0.14rem 0 0 $black;
 
-$night-box-shadow-1-blue: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
-$night-button-sailornight-shadow: inset -1px -1px 0 0 #e6dce4,
-  inset 1px 1px 0 0 #ffffff;
-$night-button-sailornite-shadow: inset -1px -1px 0 0 #b4b4b4,
-  inset 1px 1px 0 0 #ffffff;
+$night-box-shadow-1-pale: inset -0.07rem -0.07rem 0 0 #5c5c5c,
+  inset 0.07rem 0.07rem 0 0 $white;

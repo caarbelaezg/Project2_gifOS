@@ -1,13 +1,14 @@
 const apiFetch = async (url) => {
   try {
-    const resp = await fetch(url);
-    if (resp.ok) {
-      const respJson = await resp.json();
-      return respJson.data;
+    const response = await fetch(url);
+    if (response.ok) {
+      const responseJson = await response.json();
+      return responseJson.data;
     }
     return null;
   } catch (error) {
-    console.log("Error: ", error);
+    document.getElementById("wrong").style.display = "block";
+    console.log("Error ", error);
   }
 };
 
@@ -25,29 +26,28 @@ const createGifObjectsArray = async (url) => {
     return gifObjectsArray;
   } else {
     console.log("Error in fetch response");
+    document.getElementById("wrong").style.display = "block";
   }
 };
 
 //load an html section with the results from a fetch
 const loadSection = async (url, sectionContainer) => {
-  console.log(url)
   const container = document.getElementById(sectionContainer);
   container.innerHTML = "";
   let array = await createGifObjectsArray(url);
-  
   array.forEach((element, index) => {
     setTimeout(() => {
       const gifContainer = document.createElement("div");
-      gifContainer.setAttribute("class", "template__gif__container");
+      gifContainer.setAttribute("class", "template-gif");
       const img = document.createElement("img");
       img.setAttribute("src", array[index].url);
       img.setAttribute("alt", array[index].title);
-      img.setAttribute("class", "gif__img");
+      img.setAttribute("class", "gif-img");
       const titleContainer = document.createElement("div");
-      titleContainer.setAttribute("class", "gif__title");
+      titleContainer.setAttribute("class", "gif-title");
       const gifTitle = document.createElement("p");
       gifTitle.innerHTML = array[index].title;
-      gifTitle.setAttribute("class", "gif__text");
+      gifTitle.setAttribute("class", "gif-text");
       gifContainer.appendChild(img);
       gifContainer.appendChild(titleContainer);
       titleContainer.appendChild(gifTitle);
@@ -61,11 +61,11 @@ const setUrl = (url) => {
 };
 
 const htmlChange = () => {
-  document.getElementById("mis__guifos").onclick = () => {
-    setUrl("mis_guifos.html");
+  document.getElementById("mis-guifos").onclick = () => {
+    setUrl("mis-guifos.html");
   };
-  document.getElementById("create__guifo").onclick = () => {
-    setUrl("crear_guifo.html");
+  document.getElementById("crear-button").onclick = () => {
+    setUrl("crear-guifos.html");
   };
 };
 

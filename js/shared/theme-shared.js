@@ -1,36 +1,36 @@
-const dropdown = document.getElementById("dropdown__themes");
+const dropdown = document.getElementById("dropdown-themes");
 
 const setTheme = () => {
   const theme = sessionStorage.getItem("theme");
   if (theme === "night") {
-    document.getElementById("body__theme").className = "sailor__night";
+    document.getElementById("body-theme").className = "sailor-night";
   } else {
-    document.getElementById("body__theme").className = "sailor__day";
+    document.getElementById("body-theme").className = "sailor-day";
   }
 };
 
 const themeChange = () => {
-  document.getElementById("theme__button").onclick = (event) => {
-    dropdown.style.display = "flex";
+  document.getElementById("theme-button").onclick = (event) => {
+    dropdown.style.display = "block";
     event.stopPropagation();
     window.onclick = (ev) => {
       dropdown.style.display = "none";
     };
   };
-  document.getElementById("theme__button_dpd").onclick = (event) => {
-    dropdown.style.display = "flex";
+  document.getElementById("theme-button-arrow").onclick = (event) => {
+    dropdown.style.display = "block";
     event.stopPropagation();
     window.onclick = (ev) => {
       dropdown.style.display = "none";
     };
   };
-  document.getElementById("theme__button__nite").onclick = () => {
-    document.getElementById("body__theme").className = "sailor__night";
+  document.getElementById("night").onclick = () => {
+    document.getElementById("body-theme").className = "sailor-night";
     dropdown.style.display = "none";
     sessionStorage.setItem("theme", "night");
   };
-  document.getElementById("theme__button__day").onclick = () => {
-    document.getElementById("body__theme").className = "sailor__day";
+  document.getElementById("day").onclick = () => {
+    document.getElementById("body-theme").className = "sailor-day";
     dropdown.style.display = "none";
     sessionStorage.setItem("theme", "day");
   };

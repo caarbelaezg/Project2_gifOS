@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>GifOS - Busqueda y creación de gifs</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link
@@ -11,175 +12,141 @@
       rel="stylesheet"
     />
   </head>
-  <body id="body__theme" class="sailor__day">
-    <!-- Header p-->
+  <body id="body-theme" class="sailor-day">
     <header>
       <h1>
         ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
         de visitas: 12.765.803
       </h1>
     </header>
-
-    <!-- Navigation -->
     <nav>
-      <a href="index.html">
-        <img src="images/gifOF_logo.png" alt="Guifo logo" />
-      </a>
-      <div id="navigtation__buttons" class="navigtation__buttons">
-        <button id="create__guifo" class="create__guifo">Crear Guifos</button>
-        <div class="theme__button__container">
-          <button id="theme__button" class="theme__button">Elegir tema</button>
-          <button class="theme__button_dpd" id="theme__button_dpd">
-            <img src="images/dropdown.svg" alt="dropdown arrow" />
+      <a href="index.html"
+        ><img class="logo" src="images/gifOF_logo.png" alt="Logo gifOs"
+      /></a>
+      <div id="nav-buttons">
+        <button id="crear-button" class="crear-button">Crear Guifos</button>
+        <div id="theme-button-container" class="tema-button-container">
+          <button id="theme-button" class="tema-button">Elegir tema</button>
+          <button id="theme-button-arrow" class="dropdown-button">
+            <img class="dropdown-icon" src="images/dropdown.svg" alt="arrow" />
           </button>
-          <ul class="dropdown__themes" id="dropdown__themes">
+          <ul id="dropdown-themes" class="dropdown-themes">
+            <li><button id="day" class="day-button">Sailor Day</button></li>
             <li>
-              <button id="theme__button__day" class="theme__button__day">
-                <u>S</u>ailor day
-              </button>
-            </li>
-            <li>
-              <button id="theme__button__nite" class="theme__button__nite">
-                <u>S</u>ailor Night
-              </button>
+              <button id="night" class="night-button">Sailor Night</button>
             </li>
           </ul>
         </div>
-        <button id="mis__guifos" class="mis__guifos"><u>M</u>is Guifos</button>
+        <button id="mis-guifos" class="mis-guifos"><u>M</u>is Guifos</button>
       </div>
     </nav>
-
-    <!--Search section-->
-    <section class="search">
-      <h2 class="search__title">Buscar</h2>
-      <div class="search__bar__container">
-        <input
-          type="text"
-          id="search__input"
-          class="search__bar"
-          placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
-          autocomplete="off"
-          size="10"
-        />
-        <button id="search__button">
-          <img
-            src="images/lupa_inactive.svg"
-            alt="lupa inactive"
-            class="lupa__inactive"
+    <section class="search-section">
+      <div class="bottom-part-container">
+        <h2>Buscar</h2>
+        <div class="search-bar-container">
+          <input
+            id="input-field"
+            class="search-bar"
+            type="text"
+            size="10"
+            placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
+            autocomplete="on"
           />
-          <img src="images/lupa.svg" alt="lupa" class="lupa" />
-          <span>Buscar</span>
-        </button>
+          <button id="search-button">
+            <img
+              class="lupa-inactive"
+              src="images/lupa_inactive.svg"
+              alt="Lupa"
+            />
+            <img class="lupa" src="images/lupa.svg" alt="Lupa" />
+            <span>Buscar</span>
+          </button>
+          <ul id="auto-list" class="on-search-menu">
+            <li class="close-on-search-li">
+              <img id="close-onsearch" src="images/button_close.svg" alt="" />
+            </li>
+            <li>
+              <a id="result1" href="javascript:void(0)"></a>
+            </li>
+            <li>
+              <a id="result2" href="javascript:void(0)"></a>
+            </li>
+            <li><a id="result3" href="javascript:void(0)"></a></li>
+          </ul>
+        </div>
       </div>
-      <ul
-        id="search__suggestion__container"
-        class="search__suggestion__container"
-      >
-        <li><a id="result1" href="javascript:void(0)">prueba1</a></li>
-        <li><a id="result2" href="javascript:void(0)">prueba2</a></li>
-        <li><a id="result3" href="javascript:void(0)">prueba3</a></li>
-      </ul>
+      <div id="results-buttons-container" class="results-buttons-container">
+      </div>
+      <h3 class="wrong-message" id="wrong">SOMETHING WENT WRONG :(</h3>
     </section>
-
-    <!--Suggestion section-->
-    <section class="suggestions">
-      <div class="suggestion__announce">
-        <p>Hoy te sugerimos:</p>
+    <section class="suggested-section">
+      <div class="intro-section">
+        <h3>Hoy te sugerimos:</h3>
       </div>
-      <div class="gif__suggestion__container">
-        <!--Suggested gif 1-->
-        <article class="suggested__gif__container">
-          <div class="hashtag__bar">
-            <h4 id="hashtag1">#Hashtag</h4>
-            <img src="images/button_close.svg" alt="" />
+      <div class="suggested-gif-container">
+        <div class="suggested-gif">
+          <div class="hashtag-bar">
+            <h4 id="gif-heading1">#hashtag</h4>
+            <img src="images/button_close.svg" alt="exit" />
           </div>
-          <img
-            id="suggested__gif__img1"
-            class="suggested__gif__img"
-            src=""
-            alt=""
-          />
-          <button id="see__more1" class="see__more">Ver mas...</button>
-        </article>
-        <!--Suggested gif 2-->
-        <article class="suggested__gif__container">
-          <div class="hashtag__bar">
-            <h4 id="hashtag2">#Hashtag</h4>
-            <img src="images/button_close.svg" alt="" />
+          <img class="gif" id="pos1" src="#" alt="Suggested Gif 1" />
+          <button id="more-button1">Ver más...</button>
+        </div>
+        <div class="suggested-gif">
+          <div class="hashtag-bar">
+            <h4 id="gif-heading2">#hashtag</h4>
+            <img src="images/button_close.svg" alt="exit" />
           </div>
-          <img
-            id="suggested__gif__img2"
-            class="suggested__gif__img"
-            src=""
-            alt=""
-          />
-          <button id="see__more2" class="see__more">Ver mas...</button>
-        </article>
-        <!--Suggested gif 3-->
-        <article class="suggested__gif__container">
-          <div class="hashtag__bar">
-            <h4 id="hashtag3">#Hashtag</h4>
-            <img src="images/button_close.svg" alt="" />
+          <img class="gif" id="pos2" src="#" alt="Suggested gif 2" />
+          <button id="more-button2">Ver más...</button>
+        </div>
+        <div class="suggested-gif">
+          <div class="hashtag-bar">
+            <h4 id="gif-heading3">#hashtag</h4>
+            <img src="images/button_close.svg" alt="exit" />
           </div>
-          <img
-            id="suggested__gif__img3"
-            class="suggested__gif__img"
-            src=""
-            alt=""
-          />
-          <button id="see__more3" class="see__more">Ver mas...</button>
-        </article>
-        <!--Suggested gif 4-->
-        <article class="suggested__gif__container">
-          <div class="hashtag__bar">
-            <h4 id="hashtag4">#Hashtag</h4>
-            <img src="images/button_close.svg" alt="" />
+          <img class="gif" id="pos3" src="#" alt="Suggested Gif 3" />
+          <button id="more-button3">Ver más...</button>
+        </div>
+        <div class="suggested-gif">
+          <div class="hashtag-bar">
+            <h4 id="gif-heading4">#hashtag</h4>
+            <img src="images/button_close.svg" alt="exit" />
           </div>
-          <img
-            id="suggested__gif__img4"
-            class="suggested__gif__img"
-            src=""
-            alt=""
-          />
-          <button id="see__more4" class="see__more">Ver mas...</button>
-        </article>
+          <img class="gif" id="pos4" src="#" alt="Suggested Gif 4" />
+          <button id="more-button4">Ver más...</button>
+        </div>
       </div>
     </section>
-
-    <section id="results" class="generic__template results">
-      <div class="intro__section">
-        <p id="results__intro">Resultados</p>
+    <section id="results-section" class="template-section results-section">
+      <div class="intro-section">
+        <h3 id="results-intro">Resultados</h3>
       </div>
-      <div id="result__gifs__container" class="template__guifos__container">
-        <div class="template__gif__container">
-          <img class="gif__img" src="images/Capture.JPG" alt="gif1" />
-          <div class="gif__title">
-            <p class="gif__text">title</p>
+      <div id="result-gifs-container" class="template-gif-container">
+          <img class="gif-img" src="images/Capture.JPG" alt="gif1" />
+          <div class="gif-title">
+            <p class="gif-text">title</p>
+          </div>
+        </div> 
+      </div>
+    </section>
+    <section id="tendencias" class="template-section">
+      <div class="intro-section">
+        <h3>Tendencias:</h3>
+      </div>
+      <div id="trending-gifs-container" class="template-gif-container">
+          <img class="gif-img" src="images/Capture.JPG" alt="gif1" />
+          <div class="gif-title">
+            <p class="gif-text">title</p>
           </div>
         </div>
       </div>
     </section>
-
-    <section id="tendencias" class="generic__template">
-      <div class="intro__section">
-        <p>Tendencias:</p>
-      </div>
-      <div id="trending__gifs__container" class="template__guifos__container">
-        <div class="template__gif__container">
-          <img class="gif__img" src="images/Capture.JPG" alt="gif1" />
-          <div class="gif__title">
-            <p class="gif__text">title</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--Scripts-->
     <script src="js/shared/variables-shared.js"></script>
-    <script src="js/shared/util-shared.js"></script>
+    <script src="js/shared/helper-shared.js"></script>
     <script src="js/shared/theme-shared.js"></script>
     <script src="js/main/search-section.js"></script>
-    <script src="js/main/suggestion-section.js"></script>
-    <script src="js/main/index.js"></script>
+    <script src="js/main/suggested-section.js"></script>
+    <script src="js/main/index-main.js"></script>
   </body>
 </html>

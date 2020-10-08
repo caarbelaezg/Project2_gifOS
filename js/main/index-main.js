@@ -4,5 +4,5 @@ window.onload = () => {
   htmlChange();
   loadSuggestedGifs();
   loadSearchSection();
-  loadSection(TRENDING, "trending__gifs__container");
+  loadSection(TRENDING, "trending-gifs-container");
 };

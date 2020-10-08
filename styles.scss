@@ -9,22 +9,24 @@ html {
 }
 
 @import "styles/_variables.scss";
+@import "styles/_progress-animation.scss";
 
-.sailor__day {
+.sailor-day {
   background-color: $white;
-  @import "styles/light_theme/_mixins.scss";
-  @import "styles/light_theme/_header-nav.scss";
-  @import "styles/light_theme/_search.scss";
-  @import "styles/light_theme/_suggestions.scss";
-  @import "styles/light_theme/_generic-template.scss";
-  @import "styles/light_theme/_crear_guifos.scss";
+  @import "styles/light-theme/_mixins.scss";
+  @import "styles/light-theme/_header-nav.scss";
+  @import "styles/light-theme/_search-section.scss";
+  @import "styles/light-theme/_suggested-section.scss";
+  @import "styles/light-theme/_template-section.scss";
+  @import "styles/light-theme/_crear-guifos.scss";
 }
 
-.sailor__night {
-  background-color: $white;
-  @import "styles/dark_theme/_mixins.scss";
-  @import "styles/dark_theme/_header-nav.scss";
-  @import "styles/dark_theme/_search.scss";
-  @import "styles/dark_theme/_suggestions.scss";
-  @import "styles/dark_theme/_generic-template.scss";
+.sailor-night {
+  background-color: $black;
+  @import "styles/dark-theme/_mixins.scss";
+  @import "styles/dark-theme/_header-nav.scss";
+  @import "styles/dark-theme/_search-section.scss";
+  @import "styles/dark-theme/_suggested-section.scss";
+  @import "styles/dark-theme/_template-section.scss";
+  @import "styles/dark-theme/_crear-guifos.scss";
 }
