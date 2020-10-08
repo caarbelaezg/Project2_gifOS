@@ -1,4 +1,4 @@
-const API_URL = 'http://api.giphy.com/v1/gifs';
+const API_URL = 'https://api.giphy.com/v1/gifs';
 const API_KEY =  'rWUcALWkCwlA1p0Xgqtd7XPxqAQ5pCT2';
 
 const TRENDING = API_URL + "/trending?api_key=" + API_KEY + "&limit=32";
